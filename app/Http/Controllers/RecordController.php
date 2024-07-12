@@ -41,7 +41,7 @@ class RecordController extends Controller
         Record::create($request->all());
 
 
-        return redirect()->route('records.index')->with('success', 'Record created successfully.');
+        return '<h1>Ya tenemos tu solicitud, uno de nuestros asesores se comunicará contigo pronto.</h1>';
     }
 
     /**
@@ -84,6 +84,8 @@ class RecordController extends Controller
      */
     public function destroy(Record $record)
     {
-        //
+        $record->delete();
+    
+        return redirect()->route('records.index')->with('success', 'Record deleted successfully.');
     }
 }

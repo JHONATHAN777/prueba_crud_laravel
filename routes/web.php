@@ -27,14 +27,15 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    Route::get('/records', [RecordController::class, 'index'])->name('records.index');
+    Route::post('/records', [RecordController::class, 'store'])->name('records.store');
+    Route::get('/records/{record}', [RecordController::class, 'show'])->name('records.show');
+    Route::get('/records/{record}/edit', [RecordController::class, 'edit'])->name('records.edit');
+    Route::put('/records/{record}', [RecordController::class, 'update'])->name('records.update');
+    Route::delete('/records/{record}', [RecordController::class, 'destroy'])->name('records.destroy');
 });
-Route::get('/records', [RecordController::class, 'index'])->name('records.index');
+
 Route::get('/records/create', [RecordController::class, 'create'])->name('records.create');
-Route::post('/records', [RecordController::class, 'store'])->name('records.store');
-Route::get('/records/{record}', [RecordController::class, 'show'])->name('records.show');
-Route::get('/records/{record}/edit', [RecordController::class, 'edit'])->name('records.edit');
-Route::put('/records/{record}', [RecordController::class, 'update'])->name('records.update');
-Route::delete('/records/{record}', [RecordController::class, 'destroy'])->name('records.destroy');
 
 
 require __DIR__.'/auth.php';

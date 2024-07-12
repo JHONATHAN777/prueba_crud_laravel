@@ -15,6 +15,8 @@
                         <h3>Create Record</h3>
                     </div>
                     <div class="card-body">
+
+                        
                         @if ($errors->any())
                             <div class="alert alert-danger">
                                 <ul>

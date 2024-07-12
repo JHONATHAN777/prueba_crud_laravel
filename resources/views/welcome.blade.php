@@ -94,6 +94,12 @@
             <a href="{{ route('records.create') }}" class="btn btn-success btn-lg mt-3" style="background-color: #28a745; color: white; border: none; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 1.5em; margin-top: 20px; cursor: pointer; border-radius: 5px; transition: background-color 0.3s;">Solicitar más información</a>
         </div>
     </div>
+    <!-- Bootstrap CSS -->
+<link href="https://getbootstrap.com/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="..." crossorigin="anonymous">
+
+<!-- Bootstrap JS Bundle (incluye Popper) -->
+<script src="https://getbootstrap.com/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="..." crossorigin="anonymous"></script>
+
     
 </body>
 
